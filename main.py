@@ -4,8 +4,9 @@ import pandas as pd
 
 def compare_models(correct_model, input_model):
     """
-    Compare two models and return a similarity score.
+    Compare two models and return a similarity score
     """
+
     # sort the models
     correct_model_sorted = sorted(
         correct_model, key=lambda x: (x['x'], x['y'], x['z']))
@@ -38,8 +39,10 @@ def compare_models(correct_model, input_model):
     print("Similarity Score: {} %".format(similarity_score))
 
 
+# load the correct model
 correct_model = json.loads(open('models/correct_model.json').read())
 
+# load the input model
 input_model = json.loads(open('models/model1.json').read())
 
 compare_models(correct_model, input_model)
