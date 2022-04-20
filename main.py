@@ -43,6 +43,6 @@ def compare_models(correct_model, input_model):
 correct_model = json.loads(open('models/correct_model.json').read())
 
 # load the input model
-input_model = json.loads(open('models/model1.json').read())
+input_model = json.loads(open('models/model3.json').read())
 
 compare_models(correct_model, input_model)
